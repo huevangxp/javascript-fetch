@@ -7,9 +7,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
     let content = ''; // Build the content to display
 
     for (const item of data) {
+        console.log(item)
       // Example: Assuming data is an array of objects
       content += `<p> name: ${item.name}</p>`;
       content += `<p> username: ${item.username}</p>`;
+      content += `<p>phone: ${item.phone}</p>`
     }
 
     dataContainer.innerHTML = content;
